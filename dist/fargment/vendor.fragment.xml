@@ -1,0 +1,36 @@
+<core:FragmentDefinition xmlns="sap.m"
+	xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:l="sap.ui.layout">
+<Page id="fragpage" title="Vendor Details" showNavButton="true" navButtonPress="back">
+	<Table  items="{path: '/vendor'}">
+		<columns >
+			<Column hAlign="Center">
+				<Text text="Vendor Name" />
+			</Column>
+			<Column hAlign="Center">
+				<Text text="Address" />
+			</Column>
+			<Column hAlign="Center">
+				<Text text="Maximum delivery time(in Days)" />
+			</Column>
+			<Column hAlign="Center">
+				<Text text="Ratings" />
+			</Column>
+		</columns>
+			<items>
+			<ColumnListItem>
+				<cells>
+					<Text
+						text="{vendorname}" />
+					<Text
+						text="{address}"/>
+						<Text
+						text="{maximumdeliverytime}" />
+					<Text
+						text="{rating}" />
+				</cells>
+			</ColumnListItem>
+		</items>
+	</Table>	
+	</Page>
+	</core:FragmentDefinition>

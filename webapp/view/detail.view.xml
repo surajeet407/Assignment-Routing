@@ -1,0 +1,64 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+	controllerName="assignmentroutingassignmentrouting.controller.detail" xmlns:obj="sap.uxap" xmlns:f="sap.ui.layout.form" xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+		<pages>
+			<Page id="detail">
+				<content>
+					<obj:ObjectPageLayout >
+		<obj:headerTitle>
+			<obj:ObjectPageHeader>
+			</obj:ObjectPageHeader>
+		</obj:headerTitle>
+ 
+		<obj:headerContent>
+			<f:SimpleForm id="form" 
+						layout="ResponsiveGridLayout"	width="80%">
+							<f:content>
+								<Label text="Product Name" textDirection="RTL" design="Bold" labelFor="t1" ></Label>
+								<Text id="t1" text="{/0/productname}" ></Text>
+									<Label text="Description" textDirection="RTL" design="Bold" labelFor="t2"  ></Label>
+								<Text id="t2" text="{/0/description}" ></Text>
+									<Label text="Size" textDirection="RTL" design="Bold" labelFor="t3" ></Label>
+								<Text id="t3" text="{/0/size}" ></Text>
+									<Label text="Info" textDirection="RTL" design="Bold" labelFor="t4"></Label>
+								<Text id="t4" text="{/0/info}" ></Text>
+								<Label text="Reviews" textDirection="RTL" design="Bold" labelFor="t4"></Label>
+								<RatingIndicator id="ratingindicator" enabled="false" maxValue="5" value="{/0/star}" tooltip="Rating Tooltip" />
+							</f:content>
+						</f:SimpleForm>
+		</obj:headerContent>
+ 
+		<obj:sections>
+			<obj:ObjectPageSection >
+				
+				<obj:subSections>
+				
+					<obj:ObjectPageSubSection >
+						<obj:blocks>
+							<List id="list1" headerText="Aditional Info :">
+						<items>
+							<ActionListItem
+							type="Navigation"
+							press="details"
+							text="Vendor Details">
+							</ActionListItem>
+							<ActionListItem
+							type="Navigation"
+							press="details"
+							text="customer comment">
+							</ActionListItem>
+						</items>
+					</List>	
+						</obj:blocks>
+					</obj:ObjectPageSubSection>
+				</obj:subSections>
+			</obj:ObjectPageSection>
+		</obj:sections>
+ 
+	</obj:ObjectPageLayout>
+			
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
